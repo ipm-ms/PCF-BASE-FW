@@ -1,0 +1,68 @@
+---
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+Metrics/AbcSize:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 25
+Metrics/ParameterLists:
+  Max: 10
+Metrics/PerceivedComplexity:
+  Max: 12
+
+Style/Documentation:
+  Enabled: false
+Style/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'spec/**/*'
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+Style/MethodMissing:
+  Enabled: false
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+Lint/UnusedBlockArgument:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Style/ZeroLengthPredicate:
+  Enabled: false
+Style/OptionalArguments:
+  Exclude:
+    - 'lib/liberty_buildpack/repository/configured_item.rb'
+
+# bundle exec rubocop -a -D --except Performance/Casecmp
+# bundle exec rubocop --auto-gen-config
+
+Lint/IneffectiveAccessModifier:
+  Enabled: false
+Lint/NonLocalExitFromIterator:
+  Enabled: false
+Lint/UselessAccessModifier:
+  Enabled: false
+Style/AccessorMethodName:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/ClassVars:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/ConditionalAssignment:
+  Enabled: false
