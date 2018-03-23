@@ -1,0 +1,20 @@
+spring:
+  datasource:
+     #driverClassName: org.hsqldb.jdbc.JDBCDriver
+        driver-class-name: com.mysql.jdbc.Driver
+        #url: jdbc:hsqldb:file:D:/WIT/WatchItDB
+        url: ${vcap.services.mysql.credentials.jdbcUrl}
+        username: ${vcap.services.mysql.credentials.username}
+        password: ${vcap.services.mysql.credentials.password}
+        max-active: 5
+        validation-query: select 1
+  application:
+    name: DBPoC
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
+server:
+  port: 8080

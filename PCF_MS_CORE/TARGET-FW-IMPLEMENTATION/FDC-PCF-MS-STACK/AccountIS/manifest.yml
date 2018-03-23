@@ -1,0 +1,15 @@
+applications:
+- name: AccountIS
+  instances: 1
+  memory: 1G
+  random-route: true
+  path: build/libs/AccountIS-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack_offline
+  env:
+    spring.profiles.active: cloud
+    JBP_CONFIG_APP_DYNAMICS_AGENT: "{default_application_name: 'apps.us-oma1-np2.1dc.com.cloud.AccountIS',default_tier_name: 'NONPROD.VSPHERE.OMA'}"
+  services:
+  - FDC-PCF-SERVICE-REGISTRY
+  - FDC-PCF-RABBIT-MQ
+  - FDC-PC-CIRCUIT-BREAKER-DASHBOARD
+  - appDynamics

@@ -1,0 +1,17 @@
+---
+server:
+  port: 8444
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #uri: https://gitlab.com/saibal.ghosh.1980/CONFIG-SERVER.git
+          #uri: C:\\\\SKG\\\\FD\\\\CODEBASE\\\\CONFIG-SERVER
+          #uri: https://gitlab.com/saibal.ghosh.1980/FDC-PCF-MS-STACK.git
+          uri: https://f1bbd1t@gerrit.1dc.com:8443/UK/SolutionConsulting/DigitalMaster/PCF_MS_CORE.git
+          username: f1bbd1t
+          password: 2xAEI9Ge8WR9fnpMREjP7jv/64yBSXBzyvcJ31GPZg
+          searchPaths: TARGET-FW-IMPLEMENTATION/CONFIG-FILES
+  application:
+    name: CONFIGSERVER

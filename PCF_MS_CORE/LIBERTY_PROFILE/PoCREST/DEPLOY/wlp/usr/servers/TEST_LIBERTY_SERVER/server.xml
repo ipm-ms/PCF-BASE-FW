@@ -1,0 +1,33 @@
+<server description="new server">
+
+	<!-- Enable features -->
+	<featureManager>
+		<feature>webProfile-7.0</feature>
+		<feature>localConnector-1.0</feature>
+		<feature>adminCenter-1.0</feature>
+		<feature>jaxrs-2.0</feature>
+	</featureManager>
+
+	<!-- To access this server from a remote client add a host attribute to 
+		the following element, e.g. host="*" -->
+	<httpEndpoint httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+
+	<!-- Automatically expand WAR files and EAR files -->
+	<applicationManager autoExpand="true"/>
+	<!-- Define an Administrator and non-Administrator -->
+	<basicRegistry id="basic">
+		<user name="admin" password="adminpwd"/>
+		<user name="nonadmin" password="nonadminpwd"/>
+	</basicRegistry>
+
+	<!-- Assign 'admin' to Administrator -->
+	<administrator-role>
+		<user>admin</user>
+	</administrator-role>
+	<keyStore id="defaultKeyStore" password="Liberty"/>
+
+
+    <applicationMonitor updateTrigger="mbean"/>
+
+    <webApplication id="PoCREST" location="PoCREST.war" name="PoCREST"/>
+</server>

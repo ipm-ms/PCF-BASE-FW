@@ -1,0 +1,11 @@
+applications:
+- name: SB-ADMIN
+  instances: 1
+  memory: 1G
+  random-route: true
+  path: build/libs/SBAdminServer-0.0.1-SNAPSHOT.jar
+  env:
+    spring.profiles.active: cloud
+  services:
+  - FDC-PCF-SERVICE-REGISTRY
+  - FDC-PCF-RABBIT-MQ

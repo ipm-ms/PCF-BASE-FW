@@ -1,0 +1,33 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ACCOUNT-DOMAIN-SERVICE
+  sleuth:
+    sampler:
+      percentage: 1.0
+  cloud:
+    config:
+      uri: http://localhost:8444 # TO FIND THE CONFIG SERVER
+security:
+  basic:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #TO FIND THE EUREKA SERVER
+management:
+  security:
+    enabled: false
+---
+spring:
+  profiles: cloud   
+  zipkin:
+    base-url: http://ZIPKIN
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.application.uris[0]}
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka.credentials.url}

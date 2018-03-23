@@ -1,0 +1,1 @@
+java -Dhttp.proxyHost=fdcproxy.1dc.com -Dhttp.proxyPort=8080 -Dhttps.proxyHost=fdcproxy.1dc.com -Dhttps.proxyPort=8080 -jar ./build/libs/ConfigserverLocal-0.0.1-SNAPSHOT.jar

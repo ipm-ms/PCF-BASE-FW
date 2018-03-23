@@ -1,0 +1,9 @@
+applications:
+- name: SKG-PoC-REST-LIBERTY
+  memory: 1G
+  instances: 1  
+  random-route: true
+  buildpack: https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack.git
+  ENV:
+     IBM_JVM_LICENSE: L-PMAA-A3Z8P2
+     IBM_LIBERTY_LICENSE: L-SWIS-ASNMK6
